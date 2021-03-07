@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import './components/cards/cards'
+import './components/cards/cards';
 import logo from './assets/public-white-18dp.svg';
 import Cards from './components/cards/cards.jsx';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 function App() {
     return (
         <div className="App">
@@ -13,21 +15,24 @@ function App() {
                         <h1>Travel App</h1>
                     </div>
                     <div className="search">
-                        <input className="search bar" type="text" />
+                        <input className="search bar" type="text" placeholder="Search country..." />
                         <button className="search btn"></button>
                     </div>
-                    <button className="login">Login</button>
+                    <div>
+                        <div id="lang">
+                            <select>
+                                <option>English</option>
+                                <option>Русский</option>
+                                <option>日本語</option>
+                            </select>
+                        </div>
+                        <button className="login">Login</button>
+                    </div>
                 </div>
             </header>
-            <main className="country-cards">
-              <Cards />
-            </main>
-            <footer>
-                <div className="rss-logo"></div>
-                <div className="developers">
-                    <p>Developers:</p>
-                </div>
-            </footer>
+            <Router>
+                <main className="country-cards"><Cards /></main>
+            </Router>
         </div>
     );
 }

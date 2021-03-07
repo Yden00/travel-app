@@ -1,6 +1,7 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer } from 'react';
 import './cards.css'
 import arrow from '../../assets/arrow_right_alt-white-18dp.svg'
+import { Link } from 'react-router-dom'
 const slides = [
   {
     title: 'Switzerland',
@@ -82,13 +83,14 @@ function Slide({ slide, offset }) {
       <div className="country-info">
         <span className="country-title">{slide.title}</span>
         <pre className="country-description">{slide.description}</pre>
-        <button className="explore-btn">Explore <img src={arrow} alt="arrow" /></button>
+        <Link to={slide.title.replace(/\s/g, '')}><button className="explore-btn">Explore <img src={arrow} alt="arrow" /></button></Link>
       </div>
     </li>);
 }
 
 function Cards() {
-  const [state, dispatch] = useReducer(slideReducer, initialState)
+  const [state, setState] = useReducer(slideReducer, initialState)
+
   return (
     <div className="cards-wrapper">
       <ul className="Cards">
@@ -98,8 +100,8 @@ function Cards() {
         })}
       </ul>
       <div className="cards-buttons">
-        <button onClick={() => dispatch({ type: 'PREV' })}></button>
-        <button onClick={() => dispatch({ type: 'NEXT' })}></button>
+        <button onClick={() => setState({ type: 'PREV' })}></button>
+        <button onClick={() => setState({ type: 'NEXT' })}></button>
       </div>
     </div>
   );
