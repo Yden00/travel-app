@@ -4,6 +4,7 @@ import './components/cards/cards';
 import logo from './assets/public-white-18dp.svg';
 import Cards from './components/cards/cards.jsx';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Country from './components/cards/country';
 
 function App() {
     return (
@@ -31,7 +32,10 @@ function App() {
                 </div>
             </header>
             <Router>
-                <main className="country-cards"><Cards /></main>
+                <Switch>
+                    <Route exact path="/" component={Cards}/>
+                    <Route exact path="/:countryId" component={Country}/>
+                </Switch> 
             </Router>
         </div>
     );
