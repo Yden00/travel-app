@@ -5,7 +5,6 @@ import App from './App';
 
 
 ReactDOM.render(
-  <App isAuthorized={true} />,
+  <App isAuthorized={false} />,
   document.getElementById('root')
 );
-

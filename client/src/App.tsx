@@ -4,7 +4,7 @@ import Cards from './components/Cards';
 import { BrowserRouter as Router, Switch, Route,Redirect } from 'react-router-dom';
 import Country from './components/Country';
 import Header from './components/Header'
-import { AuthPage } from './components/Auth/Auth';
+import { AuthPage } from './components/Auth';
 
 function App({isAuthorized}) {
     if(isAuthorized){
