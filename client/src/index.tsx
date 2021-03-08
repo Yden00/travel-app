@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+
 ReactDOM.render(
-    <App />,
+  <App isAuthorized={true} />,
   document.getElementById('root')
 );
 

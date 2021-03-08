@@ -98,7 +98,7 @@ a {
 }
 
 .cards-buttons button:first-child {
-  background: url(../../assets/keyboard_arrow_left-white-18dp.svg) no-repeat center center;
+  background: url(../assets/keyboard_arrow_left-white-18dp.svg) no-repeat center center;
   background-size: 40px;
   width: 50px;
   height: 50px;
@@ -110,7 +110,7 @@ a {
   cursor: pointer;
 }
 .cards-buttons button:last-child {
-  background: url(../../assets/keyboard_arrow_right-white-18dp.svg) no-repeat center center;
+  background: url(../assets/keyboard_arrow_right-white-18dp.svg) no-repeat center center;
   background-size: 40px;
   width: 50px;
   height: 50px;

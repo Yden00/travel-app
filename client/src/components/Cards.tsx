@@ -1,8 +1,8 @@
 import React, { CSSProperties, useReducer } from 'react';
 import './cards.css'
-import arrow from '../../assets/arrow_right_alt-white-18dp.svg'
+import arrow from '../assets/arrow_right_alt-white-18dp.svg'
 import { Link } from 'react-router-dom'
-import slides from '../../countries'
+import slides from '../countries'
 const initialState = {
   slideIndex: 0
 }
