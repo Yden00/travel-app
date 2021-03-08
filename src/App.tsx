@@ -2,11 +2,18 @@ import React from 'react';
 import './App.css';
 import './components/cards/cards';
 import logo from './assets/public-white-18dp.svg';
-import Cards from './components/cards/cards.jsx';
+import Cards from './components/cards/cards';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Country from './components/cards/country';
 
+
 function App() {
+    const fetchItems = async () => {
+        const data = await fetch('http://localhost:8000/countries')
+        const items = await data.json()
+        console.log(items)
+      }
+      fetchItems()
     return (
         <div className="App">
             <header>
