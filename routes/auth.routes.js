@@ -11,14 +11,13 @@ const router = Router()
 router.post(
   '/register',
   [
+    check('username','Minimum username length 3 characters').isLength({ min: 3 }),
     check('email', 'Incorrect email').isEmail(),
-    check('password', 'Minimum password length 6 characters')
-      .isLength({ min: 6 })
+    check('password', 'Minimum password length 6 characters').isLength({ min: 6 })
   ],
   async (req, res) => {
     try {
       const errors = validationResult(req)
-      console.log('Body',req.body)
       if (!errors.isEmpty()) {
         return res.status(400).json({
           errors: errors.array(),
@@ -26,7 +25,7 @@ router.post(
         })
       }
 
-      const { email, password } = req.body
+      const { username, email, password } = req.body
 
       const candidate = await User.findOne({ email })
 
@@ -35,7 +34,7 @@ router.post(
       }
 
       const hashedPassword = await bcrypt.hash(password, 12)
-      const user = new User({ email, password: hashedPassword })
+      const user = new User({ username, email, password: hashedPassword })
 
       await user.save()
 
