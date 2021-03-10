@@ -1,5 +1,8 @@
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext'
 import logo from '../assets/public-white-18dp.svg';
-const Header = () => {
+const Header = ({username}) => {
+  const auth = useContext (AuthContext)
 return (
   <header>
       <div className="header-wrapper">
@@ -19,7 +22,8 @@ return (
                       <option>日本語</option>
                   </select>
               </div>
-              <button className="login">Login</button>
+              <span className='user'>Hello  {username}!</span> 
+              <button  onClick={auth.logout} className="logout">Logout</button>
           </div>
       </div>
   </header>

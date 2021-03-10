@@ -17,11 +17,8 @@ export const RegPage = () => {
 
   const registerHandler = async () => {
     try {
-      const data = request('/api/auth/register', 'POST',{...regForm})
-      console.log(data)
-    } catch (error) {
-      
-    }
+      await request('/api/auth/register', 'POST', {...regForm})
+    } catch (e) {}
   }
 
   return (
@@ -32,7 +29,7 @@ export const RegPage = () => {
         <input onChange={changeHandler} name="username"  autoComplete="off" className="input-form" placeholder='Username'/>
         <input onChange={changeHandler} name="email" type="mail" autoComplete="off" className="input-form" placeholder='Email'/>
         <input onChange={changeHandler} name="password" type="password" className="input-form" placeholder='Password'/> 
-        <button onClick={registerHandler} disabled={loading} type="submit" className="btn-form"><a href="/">Submit</a></button>  
+        <Link to="/authorization"><button onClick={registerHandler} disabled={loading} type="submit" className="btn-form">Submit</button></Link>
       </form>
     </div>
   )

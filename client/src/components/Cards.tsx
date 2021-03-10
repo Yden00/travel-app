@@ -35,14 +35,13 @@ function Slide({ slide, offset }) {
       <div className="country-info">
         <span className="country-title">{slide.title}</span>
         <pre className="country-description">{slide.description}</pre>
-        <Link to={slide.title.replace(/\s/g, '')}><button className="explore-btn">Explore <img src={arrow} alt="arrow" /></button></Link>
+        <Link to={`/home/${slide.title.replace(/\s/g, '')}`}><button className="explore-btn">Explore <img src={arrow} alt="arrow" /></button></Link>
       </div>
     </li>);
 }
 
 function Cards() {
   const [state, setState] = useReducer(slideReducer, initialState)
-
   return (
     <main className="country-cards">
       <div className="cards-wrapper">

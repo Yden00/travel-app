@@ -1,36 +1,49 @@
 import React from 'react';
-import './App.css';
-import Cards from './components/Cards';
+import { RegPage } from './components/Registration';
+import { AuthPage } from './components/Authorization.jsx';
+import { useAuth } from './hooks/auth.hook';
 import { BrowserRouter as Router, Switch, Route,Redirect } from 'react-router-dom';
+import Cards from './components/Cards';
 import Country from './components/Country';
 import Header from './components/Header'
-import { RegPage } from './components/Registration';
-import { AuthPage } from './components/Authorization';
+import './App.css';
+import { AuthContext } from './context/AuthContext';
 
 
-function App({isAuthorized}) {
+
+function App() {
+    const {token, login , logout, userId , username} = useAuth()
+    const isAuthorized = !!token;
     if(isAuthorized){
     return (
-        <div className="App">
-            <Header/>
-            <Router>
-                <Switch>
-                    <Route exact path="/home" component={Cards}/>
-                    <Route exact path="/:countryId" component={Country}/>
-                    <Redirect to="/home"/>
-                </Switch> 
-            </Router>
-        </div>
+        <AuthContext.Provider value={{
+            token, login, logout, userId, isAuthorized
+            }}>
+            <div className="App">
+                <Header username = {username}/>
+                <Router>
+                    <Switch>
+                        <Route exact path="/home" component={Cards} />
+                        <Route exact path="/home/:countryId" component={Country} />
+                        <Redirect to="/home" />
+                    </Switch> 
+                </Router>
+            </div>
+        </AuthContext.Provider>
     );
     }
     return (
-        <div className="App">
-        <Router>
-            <Route path="/registration" exact component={RegPage}/>
-            <Route path="/authorization" exact component={AuthPage}/>
-            <Redirect to="/authorization"/>
-        </Router>
-        </div>
+        <AuthContext.Provider value={{
+            token, login, logout, userId, isAuthorized
+        }}>
+            <div className="App">
+            <Router>
+                <Route path="/registration" exact component={RegPage} />
+                <Route path="/authorization" exact component={AuthPage} />
+                <Redirect to="/authorization" />
+            </Router>
+            </div>
+        </AuthContext.Provider>
     )
 }
 export default App;
