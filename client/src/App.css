@@ -1,5 +1,5 @@
 header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 4;
 }
@@ -36,6 +36,7 @@ header {
   color: #ffffff;
   font-family: sans-serif;
   padding-left: 10px;
+  outline: none;
 }
 
 .search {

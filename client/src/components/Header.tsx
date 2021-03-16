@@ -1,17 +1,23 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthContext'
 import logo from '../assets/public-white-18dp.svg';
+import { Link } from 'react-router-dom'
 const Header = ({username}) => {
   const auth = useContext (AuthContext)
+  const [searchValue, setSearchValue] = useState('')
+
+  const changeHandler = (e) => {
+    setSearchValue(e.target.value)
+  }
 return (
   <header>
       <div className="header-wrapper">
           <div className="logo">
               <img src={logo} alt="Logo" />
-              <h1>Travel App</h1>
+              <Link to="/home"><h1>Travel App</h1></Link>
           </div>
           <div className="search">
-              <input className="search bar" type="text" placeholder="Search country..." />
+              <input onChange={changeHandler} className="search bar" type="text" placeholder="Search country..." />
               <button className="search btn"></button>
           </div>
           <div>

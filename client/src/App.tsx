@@ -14,14 +14,15 @@ import { AuthContext } from './context/AuthContext';
 function App() {
     const {token, login , logout, userId , username} = useAuth()
     const isAuthorized = !!token;
+    console.log(token)
     if(isAuthorized){
     return (
         <AuthContext.Provider value={{
             token, login, logout, userId, isAuthorized
             }}>
             <div className="App">
-                <Header username = {username}/>
                 <Router>
+                    <Header username = {username}/>
                     <Switch>
                         <Route exact path="/home" component={Cards} />
                         <Route exact path="/home/:countryId" component={Country} />
