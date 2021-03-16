@@ -18,22 +18,22 @@ export const countries = [
     emblem: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coat_of_arms_of_Switzerland.svg/85px-Coat_of_arms_of_Switzerland.svg.png'
   },
   {
-    id: 'indonesia',
-    title: 'Indonesia',
-    description: 'Explore The magic of Indonesia',
-    background: 'https://images.wallpaperscraft.ru/image/indoneziya_ostrov_yava_vulkan_bromo_holmy_vysota_goluboe_rozovoe_nebo_oblaka_90613_1920x1080.jpg',
+    id: 'japan',
+    title: 'Japan',
+    description: 'Explore The magic of Japan',
+    background: 'https://wallpaperaccess.com/full/6512.jpg',
     pictures: [
-      'https://wallpapercave.com/wp/wp1910105.jpg',
-      'https://images8.alphacoders.com/531/thumb-1920-531497.jpg',
-      'https://wallpaperaccess.com/full/22023.jpg',
-      'https://www.teahub.io/photos/full/222-2224482_the-island-of-java-indonesia-mountains-volcano-mountain.jpg',
-      'https://i.pinimg.com/originals/27/06/d3/2706d35aff5f8205a5b0298db44d4823.jpg'
+      'https://img1.goodfon.ru/original/1920x1080/c/fe/imperial-palace-tokyo-japan-3758.jpg',
+      'https://uhdwallpapers.org/uploads/converted/18/02/22/kyoto-japan-1920x1080_4595-mm-90.jpg',
+      'https://i.imgur.com/cPryUMQ.jpg',
+      'https://www.wallpapertip.com/wmimgs/183-1837190_japanese-desktop-wallpaper-japan-desktop-backgrounds.jpg',
+      'https://i.pinimg.com/originals/32/2b/0c/322b0c5ca2f8632b379c3616a872f15c.jpg'
     ],
-    video: 'https://www.youtube.com/watch?v=2b9txcAt4e0&ab_channel=AmazingPlacesonOurPlanet',
-    information: 'Country in Southeast Asia and Oceania between the Indian and Pacific oceans. It consists of more than seventeen thousand islands, including Sumatra, Java, Sulawesi, and parts of Borneo and New Guinea. Indonesia is the worlds largest island country and the 14th-largest country by land area, at 1,904,569 square kilometres (735,358 square miles). With more than 270 million people, Indonesia is the worlds fourth-most populous country and the most populous Muslim-majority country. Java, the worlds most populous island, is home to more than half of the countrys population.',
-    capital: 'Jakarta',
-    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/125px-Flag_of_Indonesia.svg.png',
-    emblem: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/National_emblem_of_Indonesia_Garuda_Pancasila.svg/85px-National_emblem_of_Indonesia_Garuda_Pancasila.svg.png'
+    video: 'https://www.youtube.com/watch?v=So7yH1Ijwsk&ab_channel=MTNightcore',
+    information: 'An island country in East Asia, located in the northwest Pacific Ocean. It is bordered on the west by the Sea of Japan, and extends from the Sea of Okhotsk in the north toward the East China Sea and Taiwan in the south. Part of the Ring of Fire, Japan spans an archipelago of 6852 islands covering 377,975 square kilometers (145,937 sq mi); the five main islands are Hokkaido, Honshu, Shikoku, Kyushu, and Okinawa. Tokyo is Japans capital and largest city; other major cities include Yokohama, Osaka, Nagoya, Sapporo, Fukuoka, Kobe, and Kyoto.Japan is the eleventh-most populous country in the world, as well as one of the most densely populated and urbanized. About three-fourths of the countrys terrain is mountainous, concentrating its population of 125.62 million on narrow coastal plains. Japan is divided into 47 administrative prefectures and eight traditional regions. The Greater Tokyo Area is the most populous metropolitan area in the world, with more than 37.4 million residents.',
+    capital: 'Tokyo',
+    flag: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/125px-Flag_of_Japan.svg.png',
+    emblem: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Imperial_Seal_of_Japan.svg/85px-Imperial_Seal_of_Japan.svg.png'
   },
   {
     id: 'newZealand',
@@ -137,7 +137,7 @@ export const countries = [
       'https://i.pinimg.com/originals/b1/71/61/b171616c4b3cffb3a64dd1cbdae91e17.jpg',
       'https://i.pinimg.com/originals/24/96/6a/24966a33784061b4c13448ea01435f60.jpg'
     ],
-    video: 'https://www.youtube.com/watch?v=r9qq0GHJeUc&ab_channel=EarthByDrone',
+    video: 'https://www.youtube.com/watch?v=wo-tOyEWTFY&ab_channel=RobertKhabian',
     information: 'Country primarily located in Western Europe, consisting of metropolitan France and several overseas regions and territories.The metropolitan area of France extends from the Rhine to the Atlantic Ocean and from the Mediterranean Sea to the English Channel and the North Sea. The overseas territories include French Guiana in South America and several islands in the Atlantic, Pacific and Indian Oceans. France borders Belgium, Luxembourg and Germany to the northeast, Switzerland, Monaco and Italy to the east, Andorra and Spain to the south, as well as the Netherlands, Suriname and Brazil in the Americas. The countrys eighteen integral regions (five of which are situated overseas) span a combined area of 643,801 km2 (248,573 sq mi) and a total population of 67.4 million (as of February 2021).France is a unitary semi-presidential republic with its capital in Paris, the countrys largest city and main cultural and commercial centre. Other major urban areas include Lyon, Marseille, Toulouse, Bordeaux, Lille and Nice. France, including its overseas territories, has the most time zones of any country, with a total of twelve.',
     capital: 'Paris',
     flag: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/125px-Flag_of_France.svg.png',

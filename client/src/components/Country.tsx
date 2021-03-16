@@ -20,7 +20,7 @@ export default function Country ({ match }) {
       <div className="about">
         <div className="capital-flag-emblem">
           <h2>Capital: {currentCountry.capital}</h2>
-          <div
+          <div className="flag"
            style={{
             backgroundImage: `url('${currentCountry.flag}') `,
           }}>

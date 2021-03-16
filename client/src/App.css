@@ -99,7 +99,6 @@ header {
 }
 
 .search.bar::placeholder {
-  opacity: 0.4;
   font-size: 18px;
   font-family: sans-serif;
   color: #ffffff;
