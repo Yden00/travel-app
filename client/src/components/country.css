@@ -1,0 +1,120 @@
+* {
+  font-family: sans-serif;
+}
+.country-page {
+ overflow-y: scroll;
+ height: 100%;
+}
+
+.country-page  h1 {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 5em;
+}
+
+.video-wrapper {
+    align-items: center;
+    padding-top: 20vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.slider {
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: 500px;
+    -webkit-overflow-scrolling: touch;  
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background-color: #25619F;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 45%;
+    height: 500px;
+    margin-right: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+.about {
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f3ebeb;
+}
+
+.capital-flag-emblem {
+  flex-basis: 30%;
+  margin: 30px 0;
+  text-align: center;
+  padding: 5px 2vw 0 2vw;
+  border-right: #ff0000 2px solid;
+}
+
+h2 {
+  font-size: 50px;
+  color: #141313;
+}
+
+.emblem , .flag{
+  display: inline-flex;
+  width: 130px;
+  margin: 20px;
+  height: 130px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.short-info {
+  flex-basis: 70%;
+  padding: 30px 100px;
+}
+.short-info p {
+  color: #000000;
+  font-size: 18px;
+  line-height: 1.7em;
+}
+
+.widget-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.local-time,
+.local-wallet,
+.local-weather,
+.map {
+    position: relative;
+    height: 22vh;
+    width: 25vw;
+    background-color: transparent;
+}
