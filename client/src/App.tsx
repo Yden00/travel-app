@@ -10,7 +10,6 @@ import './App.css';
 import { AuthContext } from './context/AuthContext';
 
 
-
 function App() {
     const {token, login , logout, userId , username} = useAuth()
     const isAuthorized = !!token;
@@ -27,7 +26,7 @@ function App() {
                         <Route exact path="/home" component={Cards} />
                         <Route exact path="/home/:countryId" component={Country} />
                         <Redirect to="/home" />
-                    </Switch> 
+                    </Switch>
                 </Router>
             </div>
         </AuthContext.Provider>
